@@ -12,5 +12,5 @@
 */
 
 Route::get('/','calculatorController@calculate');
-Route::post('/','calculatorController@calculate1')->name('+');
+Route::post('/','calculatorController@calculate1')->name('calculator');
 

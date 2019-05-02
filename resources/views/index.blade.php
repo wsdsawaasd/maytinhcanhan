@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form method="post" action="{{route('+')}}">
+    <form method="post" action="{{route('calculator')}}">
         @csrf
         <h2>Calculator</h2>
         <input type="text" name="firstNumber">
@@ -19,8 +19,11 @@
         <input type="submit" value="Multiplication(X)" name="Mul">
         <input type="submit" value="Division(/)" name="Div">
         </p>
-
     </form>
-    <p>Result Division :{{$result}}</p>
+    @if(isset($result))
+        <p>Result Division :{{$result}}</p>
+    @endif
+
+
 </body>
 </html>
